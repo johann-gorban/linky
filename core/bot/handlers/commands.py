@@ -18,7 +18,7 @@ async def all_links_handler(message: Message):
         await message.answer(text)
     else:
         links = await db.get_links_by_chat_id(str(message.chat.id))
-        text = "\n".join([link.url for link in links]) or "No links for that chat"
+        text = "\n".join([link.url for link in links]) or "No links found for that chat"
         await message.answer(text)
 
 
@@ -30,7 +30,7 @@ async def user_links_handler(message: Message):
         return
     user_id = args[1]
     links = await db.get_links_by_user_id(user_id)
-    text = "\n".join([link.url for link in links]) or "No links for that user"
+    text = "\n".join([link.url for link in links]) or "No links found for that user"
     await message.answer(text)
 
 
@@ -42,5 +42,5 @@ async def chat_links_handler(message: Message):
         return
     chat_id = args[1]
     links = await db.get_links_by_chat_id(chat_id)
-    text = "\n".join([link.url for link in links]) or "No links for that chat"
+    text = "\n".join([link.url for link in links]) or "No links found for that chat"
     await message.answer(text)
