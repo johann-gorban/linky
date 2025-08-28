@@ -59,6 +59,7 @@ class Database:
                 url=url
             )
             session.add(link_rec)
+            await session.commit()
 
 
 db = Database()
