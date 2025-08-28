@@ -18,3 +18,28 @@ There are only a few steps to deploy Linky but before doing that **do not forget
 5. Run `docker build -t linky .`
 6. Start the image typing `docker run -d linky`
 7. Use it
+
+### How to insert token
+After cloning the repo create `.env` file in the root of the project dir.
+
+Run `tree -a` to check the structure. It should look like below:
+```
+├── app
+│   ├── bot
+│   │   ├── handlers
+│   │   │   ├── commands.py
+│   │   │   └── scrapper.py
+│   │   ├── main.py
+│   │   └── services
+│   │       ├── csv_creator.py
+│   │       └── url_parser.py
+│   ├── config.py
+│   ├── database
+│   │   ├── config.py
+│   │   ├── crud.py
+│   │   └── models.py
+│   └── main.py
+├── Dockerfile
+├── .dockerignore
+├── .env
+```
