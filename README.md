@@ -43,3 +43,10 @@ Run `tree -a` to check the structure. It should look like below:
 ├── .dockerignore
 ├── .env
 ```
+
+Insert your token:
+```python
+TELEGRAM_BOT_TOKEN=your_token_with_no_quotes
+```
+
+**Do not insert** any quotes in your token
